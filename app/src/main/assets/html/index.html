@@ -5,84 +5,44 @@
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+.ui-block-a, .ui-block-b, .ui-block-c {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+#my_table{border : 1px solid black;}
+#my_table tbody tr{border : 1px solid black;}
+#my_table tbody tr td{border : 1px solid black;}
+#my_table thead tr th{border : 1px solid black;background: gray}
+</style>
 </head>
 <body>
 
-<div data-role="page" id="pageone">
+<!--
+<div data-role="page" id="three_column">
+</div> -->
+<div data-role="page" id="toggle_table">
   <div data-role="header">
-    <h1>Column Toggle Table</h1>
+    <h1>WEBVIEW SAMPLE</h1>
   </div>
 
 
-
   <div data-role="main" class="ui-content">
-    <p>Reflow Tables lay the table data horizontally until it reaches a minimum size, then all rows are grouped together in a vertical stack with the corresponding labels.</p>
-    <p>In this example we have used the well-known Northwind sample database. Below is a selection from the "Customers" table.</p>
-    <p>Try to resize the width of your browser window, to see the effect.</p>
-    <table data-role="table" class="ui-responsive">
-      <thead>
-      <tr>
-        <th>CustomerID</th>
-        <th>CustomerName</th>
-        <th>ContactName</th>
-        <th>Address</th>
-        <th>City</th>
-        <th>PostalCode</th>
-        <th>Country</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>1</td>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Obere Str. 57</td>
-        <td>Berlin</td>
-        <td>12209</td>
-        <td>Germany</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Antonio Moreno Taquería</td>
-        <td>Antonio Moreno</td>
-        <td>Mataderos 2312</td>
-        <td>México D.F.</td>
-        <td>05023</td>
-        <td>Mexico</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Around the Horn</td>
-        <td>Thomas Hardy</td>
-        <td>120 Hanover Sq.</td>
-        <td>London</td>
-        <td>WA1 1DP</td>
-        <td>UK</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Berglunds snabbköp</td>
-        <td>Christina Berglund</td>
-        <td>Berguvsvägen 8</td>
-        <td>Luleå</td>
-        <td>S-958 22</td>
-        <td>Sweden</td>
-      </tr>
-      </tbody>
-    </table>
+    <p>Three-column Styled Layout:</p>
+    <div class="ui-grid-b">
+      <div class="ui-block-a"><span>First Column</span></div>
+      <div class="ui-block-b"><span>Second Column</span></div>
+      <div class="ui-block-c"><span>Third Column</span></div>
+    </div>
   </div>
-
-
-
-
-
-
-
   <div data-role="main" class="ui-content">
-    <p>The "column toggle table" will hide columns when there is not enough width to display the data.</p>
-    <p>In this example we have used the well-known Northwind sample database. Below is a selection from the "Customers" table.</p>
-    <h4>Slowly resize the width of your browser window. The layout will adjust itself to fit the "new" width of the browser. OR, you can use the "Columns..." button to choose which column should be hidden or shown.</h4>
-    <table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">
+
+    <table data-role="table" data-mode="columntoggle" class="ui-responsive" id="my_table">
       <thead>
       <tr>
         <th data-priority="6">CustomerID</th>
@@ -106,10 +66,10 @@
       </tr>
       <tr>
         <td>2</td>
-        <td>Antonio Moreno Taquería</td>
+        <td>Antonio Moreno Taqueria</td>
         <td>Antonio Moreno</td>
         <td>Mataderos 2312</td>
-        <td>México D.F.</td>
+        <td>Mexico D.F.</td>
         <td>05023</td>
         <td>Mexico</td>
       </tr>
@@ -124,10 +84,10 @@
       </tr>
       <tr>
         <td>4</td>
-        <td>Berglunds snabbköp</td>
+        <td>Berglunds snabbkop</td>
         <td>Christina Berglund</td>
-        <td>Berguvsvägen 8</td>
-        <td>Luleå</td>
+        <td>Berguvsvagen 8</td>
+        <td>Lulea</td>
         <td>S-958 22</td>
         <td>Sweden</td>
       </tr>
@@ -136,10 +96,18 @@
     </table>
   </div>
 
-  <div data-role="footer">
-    <h1>Footer Text</h1>
-  </div>
-</div>
+  <a href="#" class="ui-btn">Gray Button (default)</a>
+  <a href="#" class="ui-btn ui-btn-b">Black Button</a>
+  <br>
 
+
+  <a href="#" class="ui-btn ui-btn-inline">Gray Button (default)</a>
+  <a href="#" class="ui-btn ui-btn-inline ui-btn-b">Black Button</a>
+
+</div>
+<div data-role="footer">
+  <h1>Footer Text</h1>
+</div>
+</div>
 </body>
 </html>
