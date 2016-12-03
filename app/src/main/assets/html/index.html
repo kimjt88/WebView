@@ -3,23 +3,12 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="../css/common.css">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="../js/common.js"></script>
 
-  <style>
-.ui-block-a, .ui-block-b, .ui-block-c {
-    background-color: lightgray;
-    border: 1px solid black;
-    height: 100px;
-    font-weight: bold;
-    text-align: center;
-    padding: 30px;
-}
-#my_table{border : 1px solid black;}
-#my_table tbody tr{border : 1px solid black;}
-#my_table tbody tr td{border : 1px solid black;}
-#my_table thead tr th{border : 1px solid black;background: gray}
-</style>
+
 </head>
 <body>
 
@@ -102,12 +91,19 @@
 
 
   <a href="#" class="ui-btn ui-btn-inline">Gray Button (default)</a>
-  <a href="#" class="ui-btn ui-btn-inline ui-btn-b">Black Button</a>
+  <a id='test_btn' href="#" class="ui-btn ui-btn-inline ui-btn-b">show success</a>
 
 </div>
 <div data-role="footer">
   <h1>Footer Text</h1>
 </div>
 </div>
+<script>
+  $(function(){
+    $("#test_btn").click(function(){
+     app.init();
+    });
+  });
+</script>
 </body>
 </html>
